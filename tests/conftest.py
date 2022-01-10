@@ -1,6 +1,6 @@
 from pytest import fixture
 from classes.copo import Copo
-from classes.recipiente import Recipiente
+from classes.recipient import Recipient
 
 
 @fixture
@@ -10,9 +10,9 @@ def copo_comum():
 
 @fixture
 def rec_comum():
-    return Recipiente(100)
+    return Recipient(100)
 
 
 @fixture
 def rec_negativo():
-    return Recipiente(-1000)
+    return Recipient(-1000)

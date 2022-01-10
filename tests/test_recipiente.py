@@ -1,7 +1,7 @@
-from classes.recipiente import Recipiente
+from classes.recipient import Recipient
 
 
-def test_recipiente_atributos(rec_comum: Recipiente):
+def test_recipiente_atributos(rec_comum: Recipient):
     assert (
         rec_comum.tamanho == 100.0
     ), "Verifique se o tamanho do recipiente está sendo atribuido corretamente"
@@ -14,25 +14,25 @@ def test_recipiente_atributos(rec_comum: Recipiente):
     ), "Verifique se o atributo limpo do recipiente foi inicializado como verdadeiro"
 
 
-def test_recipiente_tamanho_negativo(rec_negativo: Recipiente):
+def test_recipiente_tamanho_negativo(rec_negativo: Recipient):
     assert (
         rec_negativo.tamanho == 0
     ), "Verifique se, ao passar um valor negativo como tamanho do recipiente, ele é inicializado em 0"
 
 
-def test_recipiente_estado(rec_comum: Recipiente):
+def test_recipiente_estado(rec_comum: Recipient):
     assert (
         rec_comum.estado()
     ), "Verifique se o metodo estado do recipiente retorna `limpo` inicialmente"
 
 
-def test_recipiente_esta_vazio(rec_comum: Recipiente):
+def test_recipiente_esta_vazio(rec_comum: Recipient):
     assert (
         rec_comum.esta_vazio()
     ), "Verifique se o recipiente esta sendo inicializado como vazio"
 
 
-def test_recipiente_sujar(rec_comum: Recipiente):
+def test_recipiente_sujar(rec_comum: Recipient):
     rec_comum.sujar()
 
     assert (
@@ -51,7 +51,7 @@ def test_recipiente_sujar(rec_comum: Recipiente):
     ), "Verifique se o __str__ do recipiente está correto"
 
 
-def test_recipiente_rotina(rec_comum: Recipiente):
+def test_recipiente_rotina(rec_comum: Recipient):
     rec_comum.conteudo = 100.0
     rec_comum.sujar()
     rec_comum.lavar()

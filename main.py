@@ -1,3 +1,6 @@
+from classes.recipient import Recipient
+from classes.copo import Copo
+
 if __name__ == "__main__":
-    # Execute suas testagens manuais aqui
-    ...
+    meu_recipiente = Recipient(100, 300, True)
+    print(meu_recipiente)
