@@ -2,7 +2,10 @@
 
 class Recipient():
     def __init__(self, tamanho = 0, conteudo = 0, limpo = True):
-        self.tamanho = tamanho
+        if(tamanho < 0):
+            self.tamanho = 0    
+        else:
+            self.tamanho = tamanho
         self.conteudo = conteudo
         self.limpo = limpo
     
@@ -33,8 +36,8 @@ class Recipient():
         self.limpo = False
 
 
-    # def __repr__(self) :
-    #     return '<class %s\nobjeto %s>' % (Recipient.__name__, self.limpo)
+    def __repr__(self) :
+        return f'Um %se %s não especificado' % ((Recipient.__name__).lower(), self.estado())
 
     # def __str__(self):
     #     return f"Um recipiente {self.estado()} não especificado"
