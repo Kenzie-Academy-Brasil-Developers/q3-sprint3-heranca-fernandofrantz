@@ -36,7 +36,12 @@ class Copo(Recipient):
 
 
     def __repr__(self) :
-        return f'Um %s vazio de %s.0ml' % ((Copo.__name__).lower(), self.tamanho)
+        print(self.conteudo)
+        if(self.conteudo > 0):
+            ...
+            return f'Um %s de %s.0ml contendo %s.0ml de %s' % ((Copo.__name__).lower(), self.tamanho, self.conteudo, self.bebida)
+        else:
+            return f'Um %s vazio de %s.0ml' % ((Copo.__name__).lower(), self.tamanho)
 
 
     # def __str__(self):
